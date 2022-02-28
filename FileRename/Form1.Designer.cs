@@ -188,7 +188,7 @@
 			this.listView1.HideSelection = false;
 			this.listView1.Location = new System.Drawing.Point(12, 5);
 			this.listView1.Name = "listView1";
-			this.listView1.Size = new System.Drawing.Size(291, 274);
+			this.listView1.Size = new System.Drawing.Size(291, 272);
 			this.listView1.TabIndex = 4;
 			this.listView1.UseCompatibleStateImageBehavior = false;
 			this.listView1.View = System.Windows.Forms.View.Details;
@@ -199,11 +199,12 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(559, 291);
+			this.ClientSize = new System.Drawing.Size(559, 289);
 			this.Controls.Add(this.listView1);
 			this.Controls.Add(this.panel1);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "Form1";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "화이트네이머";
 			this.panel1.ResumeLayout(false);
 			this.ResumeLayout(false);
