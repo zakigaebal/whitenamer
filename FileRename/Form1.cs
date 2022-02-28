@@ -33,6 +33,19 @@ namespace FileRename
 				listView1.Columns.Add("현재이름", 100);
 				listView1.Columns.Add("바꿀이름", 250);
 			}
+			//버튼초기화
+			{
+				btnClearList.Enabled = false;
+				btnRestore.Enabled = false;
+				btnNameAddFront.Enabled = false;
+				btnNameClear.Enabled = false;
+				btnNameClearExt.Enabled = false;
+				btnNumAdd.Enabled = false;
+				btnChangeExtension.Enabled = false;
+				btnDelExtension.Enabled = false;
+				btnApply.Enabled = false;
+			}
+
 		}
 		public enum ListColumn
 		{
@@ -133,6 +146,18 @@ namespace FileRename
 
 			}
 			RefreshList();
+			if (mFileList.Count > 0)
+			{
+				btnClearList.Enabled = true;
+				btnRestore.Enabled = true;
+				btnNameAddFront.Enabled = true;
+				btnNameClear.Enabled = true;
+				btnNameClearExt.Enabled = true;
+				btnNumAdd.Enabled = true;
+				btnChangeExtension.Enabled = true;
+				btnDelExtension.Enabled = true;
+				btnApply.Enabled = true;
+			}
 		}
 
 
@@ -173,6 +198,16 @@ namespace FileRename
 		{
 			mFileList.Clear();
 			listView1.Items.Clear();
+
+			btnClearList.Enabled = false;
+			btnRestore.Enabled = false;
+			btnNameAddFront.Enabled = false;
+			btnNameClear.Enabled = false;
+			btnNameClearExt.Enabled = false;
+			btnNumAdd.Enabled = false;
+			btnChangeExtension.Enabled = false;
+			btnDelExtension.Enabled = false;
+			btnApply.Enabled = false;
 		}
 
 		private void btnNameAddFront_Click(object sender, EventArgs e)
@@ -355,12 +390,10 @@ namespace FileRename
 			{
 				string[] strFileNames = e.Data.GetData(DataFormats.FileDrop) as string[];
 				AddList(strFileNames);
-				
-
 			}
-
-
 		}
+		// DragDrop은 리스트 컨트롤에 마우스를 드래그해서 놓았을때 발생하는 함수
+
 
 		private void listView1_DragEnter(object sender, DragEventArgs e)
 		{
@@ -369,5 +402,6 @@ namespace FileRename
 			else
 				e.Effect = DragDropEffects.None;
 		}
+		//DragEnter는 마우스로 리스트컨트롤 안으로 들어왔을 때 발생하는 함수
 	}
 }
