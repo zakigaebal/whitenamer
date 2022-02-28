@@ -135,7 +135,9 @@
 			this.Controls.Add(this.numFrmCBoxDigit);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.numFrmLblContext);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.Name = "NumberForm";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "NumberForm";
 			this.ResumeLayout(false);
 			this.PerformLayout();

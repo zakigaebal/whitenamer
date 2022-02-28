@@ -101,7 +101,9 @@
 			this.Controls.Add(this.nameFrmBtnCancel);
 			this.Controls.Add(this.nameFrmLblContext);
 			this.Controls.Add(this.nameFrmEdit);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.Name = "NameForm";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "NameForm";
 			this.ResumeLayout(false);
 			this.PerformLayout();

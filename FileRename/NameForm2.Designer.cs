@@ -99,7 +99,9 @@
 			this.Controls.Add(this.nameFrmBtn2Cancel);
 			this.Controls.Add(this.nameFrm2LblContext1);
 			this.Controls.Add(this.nameFrm2Edit1);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
 			this.Name = "NameForm2";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "NameForm2";
 			this.ResumeLayout(false);
 			this.PerformLayout();
